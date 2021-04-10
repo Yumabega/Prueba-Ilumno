@@ -1,0 +1,8 @@
+name: Prueba Ilumno
+type: module
+description: 'Este modulo tiene como objetivo desarrollar la prueba de ingreso para la empresa Ilumno'
+package: Ilumno
+
+version: '1.0.0'
+project: 'drupal'
+core_version_requirement: ^8 || ^9

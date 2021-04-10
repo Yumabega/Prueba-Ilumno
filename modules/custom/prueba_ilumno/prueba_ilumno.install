@@ -1,0 +1,55 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function prueba_ilumno_schema() {
+  $schema['example_users'] = [
+    'description' => 'example_users table',
+    'fields' => [
+      'id' => [
+        'description' => 'The id',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'Name',
+        'type' => 'varchar_ascii',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'identification' => [
+        'description' => 'identification',
+        'type' => 'int',
+        'length' => 15,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'birth_date' => [
+        'description' => 'birth_date',
+        'type' => 'varchar_ascii',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'range' => [
+        'description' => 'range',
+        'type' => 'int',
+        'length' => 1,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'state' => [
+        'description' => 'state',
+        'type' => 'int',
+        'length' => 1,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id', 'identification']
+  ];
+
+  return $schema;
+}

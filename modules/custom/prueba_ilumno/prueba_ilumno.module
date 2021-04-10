@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function prueba_ilumno_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.prueba_ilumno':
+      $output = '<h3>' . t('This is a test for Ilumno Company') . '</h3>';
+      $output .= '<p>' . t(',,,,') . '</p>';
+      return $output;
+  }
+}
+

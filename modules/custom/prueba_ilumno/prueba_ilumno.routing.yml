@@ -1,0 +1,16 @@
+prueba_ilumno.example_module_form:
+  path: '/example-module/form'
+  defaults:
+    _form: 'Drupal\prueba_ilumno\Form\CustomForm'
+    _title: 'Form'
+  requirements:
+    _permission: 'access content'
+
+prueba_ilumno.example_module_data:
+  path: '/example-module/data'
+  defaults:
+    _controller: 'Drupal\prueba_ilumno\Controller\JsonController::content'
+    _title: 'Data'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
